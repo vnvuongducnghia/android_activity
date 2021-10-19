@@ -14,6 +14,9 @@ class ActivityC : BaseActivity() {
     override val classSimpleName: String
         get() = TAG
 
+    override val activityTaskId: Int
+        get() = taskId
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_c)

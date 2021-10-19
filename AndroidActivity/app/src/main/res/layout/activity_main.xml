@@ -25,6 +25,19 @@
             android:layout_margin="2dp"
             android:text="Send Message" />
 
+        <Button
+            android:id="@+id/openThis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:text="Open This" />
     </LinearLayout>
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
 
 </FrameLayout>

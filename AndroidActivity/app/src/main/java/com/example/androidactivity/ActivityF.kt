@@ -1,7 +1,6 @@
 package com.example.androidactivity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_f.*
 
@@ -14,12 +13,22 @@ class ActivityF : BaseActivity() {
     override val classSimpleName: String
         get() = TAG
 
+    override val activityTaskId: Int
+        get() = taskId
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_f)
 
-        backA.setOnClickListener {
-            startActivity(Intent(this, ActivityA::class.java))
+        btnStandard.setOnClickListener {
+            startActivity(Intent(this, ActivityF::class.java))
         }
+
+        btnSingleTop.setOnClickListener {
+            startActivity(Intent(this, ActivityF::class.java).apply {
+                addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
+            })
+        }
+
     }
 }

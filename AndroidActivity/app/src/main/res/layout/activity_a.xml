@@ -33,5 +33,12 @@
             android:layout_margin="2dp"
             android:text="Send Message" />
 
+        <Button
+            android:id="@+id/startNewTask"
+            android:layout_width="wrap_content"
+            android:text="New Task"
+            android:layout_margin="2dp"
+            android:layout_height="wrap_content" />
+
     </LinearLayout>
 </LinearLayout>

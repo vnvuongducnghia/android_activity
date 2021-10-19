@@ -8,6 +8,7 @@ import kotlinx.android.synthetic.main.activity_a.*
 abstract class BaseActivity : AppCompatActivity() {
 
     abstract val classSimpleName :String
+    abstract val activityTaskId :Int
 
     companion object{
         private const val TAG = "BaseActivity"
@@ -15,11 +16,12 @@ abstract class BaseActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d(TAG, "CREATED: $classSimpleName -- TASK ID: $taskId")
+        supportActionBar!!.title = classSimpleName
+        Log.d(TAG, "CREATED: $classSimpleName -- TASK ID: $activityTaskId")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.d(TAG, "DESTROYED: $classSimpleName -- TASK ID: $taskId")
+        Log.d(TAG, "DESTROYED: $classSimpleName -- TASK ID: $activityTaskId")
     }
 }
