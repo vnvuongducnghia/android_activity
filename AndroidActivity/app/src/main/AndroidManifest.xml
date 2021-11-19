@@ -9,17 +9,34 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!--android:launchMode="singleInstance"-->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:icon="@drawable/ic_baseline_filter_1_24"
+
+            android:label="MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".ActivityF"
+            android:launchMode="singleInstance"
             android:exported="true" />
         <activity
             android:name=".ActivityE"
             android:exported="true" />
+      <!--  <activity
+            android:name=".ActivityD"
+            android:exported="true"  />-->
+
         <activity
             android:name=".ActivityD"
-            android:taskAffinity=".ActivityD"
+            android:exported="true"
             android:launchMode="singleTask"
-            android:exported="true" />
+            android:taskAffinity=".ActivityD" />
         <activity
             android:name=".ActivityC"
             android:exported="true" />
@@ -28,11 +45,11 @@
             android:exported="true"
             android:icon="@drawable/ic_baseline_filter_3_24"
             android:label="ActivityB">
-            <intent-filter>
+           <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
 
         <!--android:parentActivityName=".MainActivity"-->
@@ -42,23 +59,13 @@
             android:icon="@drawable/ic_baseline_filter_2_24"
             android:label="ActivityA"
             android:parentActivityName=".MainActivity">
-            <intent-filter>
+            <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:icon="@drawable/ic_baseline_filter_1_24"
-            android:label="MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>

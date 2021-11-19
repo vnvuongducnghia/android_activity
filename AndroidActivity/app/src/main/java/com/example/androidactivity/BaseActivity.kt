@@ -17,11 +17,11 @@ abstract class BaseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar!!.title = classSimpleName
-        Log.d(TAG, "CREATED: $classSimpleName -- TASK ID: $activityTaskId")
+        Log.d(TAG, "[o] CREATED: $classSimpleName -- TASK ID: $activityTaskId")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.d(TAG, "DESTROYED: $classSimpleName -- TASK ID: $activityTaskId")
+        Log.d(TAG, "[x] DESTROYED: $classSimpleName -- TASK ID: $activityTaskId")
     }
 }

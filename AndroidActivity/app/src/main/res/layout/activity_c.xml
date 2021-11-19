@@ -20,11 +20,11 @@
             android:text="Open D" />
 
         <Button
-            android:id="@+id/sendMessageD"
+            android:id="@+id/openE"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
-            android:text="Send Message" />
+            android:text="Open A" />
 
     </LinearLayout>
 </LinearLayout>
